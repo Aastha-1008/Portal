@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poor+Story&display=swap');
+.image-slider{
+  position: relative;
+  left: 27%;
+  margin-top: 4%;
+  box-sizing: border-box;
+  overflow: scroll-y;
+  z-index: -1;
+}
+.image h1{
+  font-family: 'Libre Baskerville', serif;
+  position: relative;
+  left: 17rem;
+}
+.about_kiet{
+  margin: 3rem 1rem;
+  width: 48rem;
+}
+.about_kiet p{
+  text-align: justify;
+  font-size: 1.2rem;
+}
+.data1{
+  width: 50rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.detail{
+  margin: 20px 20px;
+  box-shadow: 2px 2px 5px 1px gray;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 2rem;
+}
+.detail h1{
+  height: 4rem;
+  font-size: 1.5rem;
+  color: #008080;
+}
+
+.detail p{
+  height: 2rem;
+  display: inline;
+  position: relative;
+  font-size: 1.1rem;
+  color: rgb(27, 4, 92);
+}
+.vision{
+  position: relative;
+  left: 1.2rem;
+  background-color: rgb(41, 38, 38);
+  color: white;
+  width: 48rem;
+  padding: 1rem;
+}
+.vision h1{
+  padding: 1rem 0;
+  font-family: 'Poor Story', cursive;
+  padding-left: .5rem;
+}
+.vision p, li{
+  padding: 1rem 1rem;
+}
+.struct{
+  margin:2rem;
+  font-family: 'Libre Baskerville', serif;
+  position: relative;
+  left: 8rem;
+}

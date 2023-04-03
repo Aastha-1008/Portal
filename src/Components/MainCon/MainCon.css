@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+.main {
+  position: relative;
+  margin-top: 6%;
+  left: 20%;
+  z-index: 1;
+}
+.top {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+.kiet {
+  text-align: center;
+  position: relative;
+  left: -5%;
+  padding: 0.5rem 0rem;
+  margin: 3rem 0rem;
+  font-family: "Libre Baskerville", serif;
+  box-shadow: 2px 2px 10px black;
+}
+.kiet img {
+  width: 5rem;
+  height: 4rem;
+}
+.kiet p {
+  font-size: 1rem;
+}
+.adam {
+  margin: 0.2rem 1rem;
+  width: 20rem;
+  height: 22rem;
+  text-align: center;
+  padding: 0.4rem;
+  background-color: rgb(44, 54, 51);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 2px 2px 10px 2px black;
+}
+.adam h1 {
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Libre Baskerville", serif;
+}
+.adamDetail {
+  background-color: orange;
+  padding: 0.2rem 0.1rem;
+  border-radius: 10px;
+  line-height: 1rem;
+  color: black;
+}
+.apply h1 {
+  background-color: rgb(32, 58, 106);
+  color: white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 16rem;
+  font-family: "Satisfy", cursive;
+  box-shadow: 2px 2px 10px black;
+}
+.courses {
+  width: 23rem;
+  height: 22rem;
+  background-color: rgb(51, 47, 47);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 1px black;
+  line-height: 0.9rem;
+}
+.courses h1 {
+  font-size: 1.4rem;
+}
+.courses p {
+  font-size: 0.8rem;
+}
+.courses li {
+  font-size: 0.6rem;
+  position: relative;
+  left: 7%;
+  top: -3%;
+}
+.ico {
+  margin: 1.5rem 0rem;
+}
+.ics {
+  padding: 0rem 0.6rem;
+  color: rgb(12, 12, 70);
+}
+.ics:hover {
+  padding: 0.1rem 0.7rem;
+  color: rgb(211, 37, 39);
+  transition: all 0.1s ease-in-out;
+}
+.procedure a {
+  color: rgb(22, 22, 79);
+  list-style: none;
+  font-size: 1.2rem;
+}
+.procedure li {
+  padding: 0.5rem 0rem;
+}
+.procedure li:hover {
+  font-weight: bold;
+  transition: all 0.1s ease-in;
+}
+.recenthiringinfo {
+  margin-top: 3rem;
+  display: flex;
+  background-color: #042331;
+  color: white;
+  padding: 1rem 1rem;
+}
+.comp p {
+  line-height: 0.5rem;
+  margin-left: 2rem;
+}
+.data {
+  margin-bottom: 2rem;
+  width: 25rem;
+}
+h4,
+.hiringdata {
+  font-family: "Libre Baskerville", serif;
+}
+.data p {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
+.hiringdata {
+  margin-top: 4rem;
+  box-shadow: 2px 2px 10px 2px white;
+  padding: 0.5rem 1rem;
+  position: relative;
+  left: -20%;
+  border-radius: 10px;
+}
+.teamcrpcmain {
+  text-align: center;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  margin: 20px 0;
+}
+.card-topmain img {
+  display: block;
+  width: 100%;
+}
+.container {
+  width: 95%;
+  margin: auto;
+}
+.cardmain {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+}
+.card-topmain {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+.card-info h2 {
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+}
+.date {
+  margin-bottom: 10px;
+}
+span,
+p {
+  font-size: 15px;
+  display: block;
+}
+.excerpt {
+  color: #aeaeae;
+}
+.flex-rowmain {
+  align-items: center;
+  justify-content: space-between;
+}
+.card-bottommain {
+  margin-top: 10px;
+}
+.buttonmain {
+  padding: 0 4px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #4e4e4e;
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+  border-radius: 5px;
+  background: #f2f4f6;
+}
+.read-moremain {
+  margin: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+.read-moremain:hover {
+  color: #042331;
+  font-weight: bold;
+  transition: all 0.1s ease-in-out;
+}
+.btn-yellowmain {
+  background: #ffb91d;
+}
+.btn-sky {
+  background: #d2f9fe;
+}
+.btn-dpink {
+  background: #e8d3fc;
+}
+.card_detailsmain {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 4rem;
+  grid-column-gap: 6rem;
+}
+.card-topmain img {
+  width: 7rem;
+  height: 6rem;
+}
+.cardmain {
+  display: flex;
+  flex-direction: row;
+}
+.readmoremain {
+  margin-left: 30rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: #042331;
+  border-radius: 10px;
+  font-family: "Courgette", cursive;
+}
+.readmoremain:hover {
+  font-weight: bold;
+  transition: all 0.1s ease-in-out;
+}
+.btn-yellowmain:hover {
+  color: #042331;
+}
+.internshiphead {
+  background-color: #ffb91d;
+  color: #042331;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.internship {
+  width: 70rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 3rem;
+  margin-top: 5rem;
+}
+.internship a {
+  color: #042331;
+  margin-left: 1rem;
+}
+.internship_heading {
+  border-left: 1px solid #ffb91d;
+  border-bottom: 1px solid #ffb91d;
+  border-bottom: 1px solid #ffb91d;
+}
+.internshipdate {
+  border-right: 1px solid #ffb91d;
+  border-bottom: 1px solid #ffb91d;
+}
+.internshipplatform {
+  background-color: #ffb91d;
+}
+.internshipplatform h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.internshipplatform p {
+  font-size: 1.2rem;
+}
+.internshipplat {
+  padding: 1rem;
+  background-color: #ffb91d;
+  display: grid;
+  grid-template-columns: 23.5rem 23.5rem 23.5rem;
+  margin-right: 22rem;
+  margin-top: -1rem;
+}
+.internshipplat a {
+  color: #042331;
+  font-size: 1.2rem;
+}
+.internin{
+  font-family: "Libre Baskerville", serif;
+  background-color: #ffb91d;
+  margin-right: 22rem;
+  margin-left: 47.06rem;
+  margin-top: -2rem;
+  font-size: 1.1rem;
+}
+hr{
+  color: #ffb91d;
+  position: relative;
+  top: 5.1rem;
+  width: 30rem;
+}
+.underline2 hr{
+  position: relative;
+  top: -7.5rem;
+  color: #b57d04;
+  border: solid 1px;
+}
+.underline3 {
+  position: relative;
+  top: 4.25rem;
+}
+.platform{
+  font-family: "Libre Baskerville", serif;
+  box-shadow: 2px 2px 10px black;
+  width: 40rem;
+  padding: 0rem 3rem;
+  margin-left: 10rem;
+}
+
+.last{
+  display: flex;
+  background-color: #042331;
+}
+.icons{
+  margin: 4rem 0rem;
+  margin-left: 8rem;
+}
+.ic{
+  padding:0rem .8rem;
+  color: white;
+}
+.kiet{
+  font-family: "Libre Baskerville", serif;
+  text-decoration: underline;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  box-shadow: none;
+
+}
+.courses li{
+  padding: .3rem;
+}

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+.studentclass {
+  position: relative;
+  left: 20rem;
+}
+.placementpolicy {
+  margin-top: 3rem;
+  border-bottom: 1px solid #042331;
+  font-family: "Rubik", sans-serif;
+}
+.placementpolicy p {
+  text-align: justify;
+}
+.placementcomplist li {
+  list-style-type: circle;
+  display: inline-block;
+}
+.studentcontent {
+  display: grid;
+  grid-template-columns: 40rem 3rem auto;
+  height: 43rem;
+}
+.studentlinkedIn {
+  margin-top: -2.5rem;
+  overflow-y: scroll;
+  padding: 0rem 1rem;
+  border-bottom: 1px solid #042331;
+  border-left: 3px solid #042331;
+}
+.studentcard {
+  box-shadow: 1px 1px 10px black;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  width: 25rem;
+  margin-top: 2rem;
+  height: 8rem;
+}
+.studentcard a {
+  color: black;
+  text-decoration: underline;
+  color: brown;
+}
+.studentcard h6 {
+  color: #042331;
+}
+.studdetails {
+  margin-bottom: 2rem;
+}
+.studentimagestudy img {
+  width: 20rem;
+  height: 20rem;
+  display: block;
+  margin-top: 3rem;
+}
+.studpreparationmethod {
+  display: grid;
+  grid-template-columns: 30rem 40rem;
+  margin-top: 5rem;
+}
+.studentpreparation {
+  font-family: "Rubik", sans-serif;
+}
+.studentpreparation li {
+  margin-top: -1rem;
+}
+.studentpreparation h1 {
+  margin-bottom: 3rem;
+}
+.studentdsa {
+  font-family: "Rubik", sans-serif;
+  display: grid;
+  grid-template-columns: 45rem 20rem;
+}
+.studentdsa1 li {
+  margin-top: -1rem;
+}
+.studentdsa1 h1 {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+.studentdsa2 img {
+  margin-top: 8rem;
+  margin-left: -15rem;
+  width: 35rem;
+  height: 35rem;
+}
+.codingplatforms li,
+.demandingtechno li {
+  margin-top: -0.5rem;
+  font-family: "Rubik", sans-serif;
+}
+.codingplatforms h3,
+.demandingtechno h3 {
+  margin-bottom: 2rem;
+  font-family: "Abril Fatface", cursive;
+}
+.studentplatform {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 5rem;
+}
+.demandingtechno {
+  margin-left: -25rem;
+  border-left: 4px solid #042331;
+  padding-left: 5rem;
+}
+.studentnote {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+.laststu {
+  position: relative;
+  top: 1rem;
+  display: flex;
+  background-color: #042331;
+  margin-right: 22rem;
+}
+.iconsstu {
+  margin: 4rem 0rem;
+  margin-left: 3rem;
+}
+.icstu {
+  padding: 0rem 0.8rem;
+  color: white;
+}
+.kietstu {
+  font-family: "Libre Baskerville", serif;
+  text-decoration: underline;
+  font-size: 2.5rem;
+  box-shadow: none;
+  margin-top: 2.5rem;
+}
