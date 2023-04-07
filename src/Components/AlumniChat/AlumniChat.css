@@ -1,0 +1,12 @@
+.messageSection{
+    height: 33rem;
+    border: 1px solid black;
+}
+.Msg input, .sendMsg{
+    width: 80%;
+    margin-top: 2rem;
+}
+.messagePart{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}

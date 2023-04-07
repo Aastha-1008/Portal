@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+.alumniSec{
+    position: relative;
+    left: 18%;
+    margin-top: 2rem;
+    width: 80%;
+    z-index: 1;
+}
+.alumniSec h1{
+    text-align: center;
+}
+.alumniSec p{
+    color: rgb(98, 19, 19);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.alumniCard{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.alumniDetails{
+    background-color: rgb(21, 39, 62);
+    width: 20rem;
+    padding: 1rem;
+    
+}
+.alumniKey p{
+    color: rgb(211, 184, 29);
+    font-family: 'Lato', sans-serif;
+}
+.alumniValue p{
+    color: white;
+}
+.alumniDetails h4{
+    color: white;
+    font-family: 'Lato', sans-serif; 
+    padding-bottom: 1rem;
+    border-bottom: 1px solid white;
+}
+.detailKeyValue{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.alumniKey button{
+    font-family: cursive;
+    width: 200%;
+    cursor: pointer;
+    font-size: 1.1rem;
+}

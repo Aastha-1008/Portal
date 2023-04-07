@@ -1,8 +1,13 @@
-import React from "react";
+import React,{useState} from "react";
 import "./sideNavbar.css";
 import { Link } from "react-router-dom";
 
 export default function  Sidenaavbar({setValue}) {
+  const [activeLink, setActiveLink] = useState("");
+
+  const handleLinkClick = (linkName) => {
+    setActiveLink(linkName);
+  };
   return (
     <div className="sideNavbar">
       
@@ -10,16 +15,17 @@ export default function  Sidenaavbar({setValue}) {
         <div className="sidebar_inner">
           <ul>
             <li>
-              <Link href="/" onClick={()=>{setValue("maincon");console.log("maincon")}}>
+              <Link to="/" className={activeLink === "home" ? "active" : ""} onClick={() => handleLinkClick("home")}>
                 <span class="icon">
                   <i className="fa fa-qrcode"></i>
                 </span>
-                <span className="text" >Home</span>
+                <span className="text">Home</span>
               </Link>
             </li>
 
             <li>
-              <Link href="/about" onClick={()=>{setValue("about")}} >
+              <Link to="/about" className={activeLink === "about" ? "active" : ""}
+            onClick={() => handleLinkClick("about")}>
                 <span className="icon">
                   <i className="fa fa-link"></i>
                 </span>
@@ -27,7 +33,8 @@ export default function  Sidenaavbar({setValue}) {
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={()=>{setValue("student");}}>
+              <Link to="/student"  className={activeLink === "student" ? "active" : ""}
+            onClick={() => handleLinkClick("student")}>
                 <span className="icon">
                   <i className="fa fa-eye"></i>
                 </span>
@@ -35,7 +42,8 @@ export default function  Sidenaavbar({setValue}) {
               </Link>
             </li>
             <li>
-              <Link href="/company" onClick={ ()=>{ setValue("company")}}>
+              <Link to="/company" className={activeLink === "company" ? "active" : ""}
+            onClick={() => handleLinkClick("company")}>
                 <span className="icon">
                   <i className="fa fa-book"></i>
                 </span>
@@ -43,7 +51,8 @@ export default function  Sidenaavbar({setValue}) {
               </Link>
             </li>
             <li>
-              <Link href="/recruitment" onClick={()=>{setValue("recruitment") }}>
+              <Link to="/recruitment" className={activeLink === "recruitment" ? "active" : ""}
+            onClick={() => handleLinkClick("recruitment")} >
                 <span className="icon">
                   <i className="fa fa-question-circle"></i>
                 </span>
@@ -51,7 +60,8 @@ export default function  Sidenaavbar({setValue}) {
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={()=>{setValue("alumni");}}>
+              <Link to="/alumni" className={activeLink === "alumni" ? "active" : ""}
+            onClick={() => handleLinkClick("alumni")}>
                 <span className="icon">
                   <i className="fa fa-pen"></i>
                 </span>
@@ -59,7 +69,8 @@ export default function  Sidenaavbar({setValue}) {
               </Link>
             </li>
             <li>
-              <Link href="/contact" onClick={()=>{setValue("contact");}}>
+              <Link to="/contact" className={activeLink === "contactt" ? "active" : ""}
+            onClick={() => handleLinkClick("contactt")}>
                 <span className="icon">
                   <i className="fa fa-id-card"></i>
                 </span>
