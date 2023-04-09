@@ -29,11 +29,11 @@ export default function Alumni() {
             linkedIn:"dfweff"
         }
     ];
-    const [alumniName,setAlumniName] = useState('');
+    const [ToName,setToName] = useState('');
     const chatMsg=(event)=>{
         const name = event.target.getAttribute('data-name');
         if(name != null)
-        setAlumniName(name);
+        setToName(name);
     }
   return (
     <div className='alumniSec'>
@@ -57,7 +57,7 @@ export default function Alumni() {
                             <p>{passoutYear}</p> 
                         </div>
                     </div>    
-                    <Link to = "/alumniChat" state={{alumni : alumniName}}><button id = "chat" >Chat</button></Link>
+                    <Link to = "/alumniChat" state={{Name : ToName}}><button id = "chat" >Chat</button></Link>
                 </div>
             ))}
         </div>``

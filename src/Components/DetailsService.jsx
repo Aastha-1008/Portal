@@ -1,10 +1,13 @@
 import axios from "axios";
-import relativeURLConstant from "./relativeUrlConstant";
 
-export const chat = async (studentName,alumniName,message,msgDate) => {
-    return await axios.put(
-        relativeURLConstant.BACKEND_SERVER_URL +
-        relativeURLConstant.INTERACTION +
-        studentName + alumniName + message + msgDate
+export const chat = async (requestBodyArray) => { 
+    return await axios.post(
+        `http://localhost:8080/interactions?${requestBodyArray}`
+    );
+}
+
+export const fetchMsgs = async (alumniAndStudent)=> {
+    return await axios.get(
+        `http://localhost:8080/fetchMsg?${alumniAndStudent}`
     );
 }

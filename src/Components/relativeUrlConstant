@@ -1,5 +1,5 @@
 const relativeURLConstant = {
     BACKEND_SERVER_URL : `http://localhost:8080/`,
-    INTERACTION : `interactions/`
+    INTERACTION : `interactions`,
 };
 export default relativeURLConstant;
