@@ -3,6 +3,8 @@ import "./AlumniChat.css";
 import qs from "qs";
 import { useLocation } from "react-router-dom";
 import { chat, fetchMsgs } from "../DetailsService";
+import grad from './grad.png';
+// import chatwallpaper from './chatwallpaper.jpg';
 
 export default function AlumniChat() {
   // const [alumniName, setAlumniName] = useState();
@@ -48,13 +50,19 @@ export default function AlumniChat() {
         document.getElementById("enterMsg").value = "";
       })
       .catch((error) => console.log(error));
+    
+      fetchMsg();
   };
+
+  var chatHistory = document.getElementById("displayChat");
+  if(chatHistory){
+chatHistory.scrollTop = chatHistory.scrollHeight;}
 
   return (
     <div className="alumniSec">
-      <h1>Alumni Interaction Section</h1>
+      <h1><img src={grad} alt="graduation"/> {ToName}</h1>
 
-      <div className="messageSection">
+      <div className="messageSection" id="displayChat" >
         {msgChat.map(({fromToMsg,message,msgDate}) => (
           <div>
           {(fromToMsg === 1)?
