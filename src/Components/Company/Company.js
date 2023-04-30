@@ -353,6 +353,7 @@ export default function Company() {
               </p>
             </div>
           ))}
+          
         </div>
       </div>
       <div className="massrecruit">

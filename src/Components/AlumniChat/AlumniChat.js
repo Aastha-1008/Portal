@@ -60,7 +60,7 @@ chatHistory.scrollTop = chatHistory.scrollHeight;}
 
   return (
     <div className="alumniSec">
-      <h1><img src={grad} alt="graduation"/> {ToName}</h1>
+      <h1><img src={grad} alt="graduation"/> {ToName}</h1>1
 
       <div className="messageSection" id="displayChat" >
         {msgChat.map(({fromToMsg,message,msgDate}) => (
