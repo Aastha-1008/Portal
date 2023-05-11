@@ -60,7 +60,7 @@ export default function Contact() {
           <br />
           <TextField
             id="standard-basic"
-            label="Address*"
+            label="Batch*"
             variant="standard"
             style={{ width: 500 }}
           />

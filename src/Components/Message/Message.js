@@ -21,7 +21,7 @@ function Message() {
     } catch (error) {
       console.error(error);
     }
-  };
+  }; 
 
   const handleInteractionChange = (event) => {
     const { name, value } = event.target;
@@ -69,7 +69,7 @@ function Message() {
               value={newInteraction.studentName}
               onChange={handleInteractionChange}
             />
-          
+
             <input
               className="messageInteraction"
               type="text"

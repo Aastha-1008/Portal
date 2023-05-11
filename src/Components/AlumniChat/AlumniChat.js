@@ -3,24 +3,24 @@ import "./AlumniChat.css";
 import qs from "qs";
 import { useLocation } from "react-router-dom";
 import { chat, fetchMsgs } from "../DetailsService";
-import grad from './grad.png';
-// import chatwallpaper from './chatwallpaper.jpg';
+import { useAuth0 } from "@auth0/auth0-react";
+import grad from "./grad.png";
 
 export default function AlumniChat() {
-  // const [alumniName, setAlumniName] = useState();
+  const { user } = useAuth0();
   const [msgValue, setMsgValue] = useState();
-  const [msgChat,setMsgChat] = useState([]);
-  const FromName = "Aastha";
+  const [msgChat, setMsgChat] = useState([]);
+  const FromName = user.nickname;
   const location = useLocation();
   var ToName = location.state.Name;
-  
+
   const MsgRead = () => {
     setMsgValue(document.getElementById("enterMsg").value);
   };
 
   const fetchMsg = async () => {
     const alumniAndStudent = {
-      FromName: "Aastha",
+      FromName: user.nickname,
       ToName: ToName,
     };
     await fetchMsgs(qs.stringify(alumniAndStudent))
@@ -31,18 +31,20 @@ export default function AlumniChat() {
   };
 
   useEffect(() => {
-      fetchMsg();
+    fetchMsg();
   },[]);
+
+  
 
   console.log(ToName);
 
-  
   const SendMsg = async () => {
     const requestBodyArray = {
       FromName: FromName,
       ToName: ToName,
       MsgValue: msgValue,
       FromToMsg: 1,
+      SoftDelete: 0,
     };
     await chat(qs.stringify(requestBodyArray))
       .then((response) => {
@@ -50,35 +52,36 @@ export default function AlumniChat() {
         document.getElementById("enterMsg").value = "";
       })
       .catch((error) => console.log(error));
+
+    fetchMsg();
     
-      fetchMsg();
   };
 
-  var chatHistory = document.getElementById("displayChat");
-  if(chatHistory){
-chatHistory.scrollTop = chatHistory.scrollHeight;}
+  
 
   return (
     <div className="alumniSec">
-      <h1><img src={grad} alt="graduation"/> {ToName}</h1>1
-
-      <div className="messageSection" id="displayChat" >
-        {msgChat.map(({fromToMsg,message,msgDate}) => (
+      <h1>
+        <img src={grad} alt="graduation" /> {ToName}
+      </h1>
+    
+      <div className="messageSection" id="displayChat">
+        {msgChat.map(({ fromToMsg, message, msgDate }) => (
           <div>
-          {(fromToMsg === 1)?
-            <div className="right">
-              <p>{message}</p><br/>
-            </div>
-          :
-            <div className="left">
-              <p>{message}</p><br/>
-            </div>
-          }
-         
-          </div> 
+            {fromToMsg === 1 ? (
+              <div className="right">
+                <p>{message}</p>
+                <br />
+              </div>
+            ) : (
+              <div className="left">
+                <p>{message}</p>
+                <br />
+              </div>
+            )}
+          </div>
         ))}
       </div>
-
       <div className="messagePart">
         <div className="Msg">
           <input

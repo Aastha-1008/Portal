@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./Company.css";
 import compimg from "./photo1.svg";
 import photo2 from "./photo2.svg";
@@ -8,9 +8,17 @@ import WebAssetIcon from "@mui/icons-material/WebAsset";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 export default function Company() {
-  const mass = [
+  const { user } = useAuth0();
+  let newProfileName = React.createRef();
+  let newCompanyName = React.createRef();
+  let newHiringNumber = React.createRef();
+  let newCTC = React.createRef();
+  let newLink = React.createRef();
+  const [mass,setMass] = useState([
     {
       name: "TCS",
       profile: "Ninja & Digital",
@@ -68,9 +76,9 @@ export default function Company() {
       ctc: "4.20LPA",
       link: "https://dxc.com/in/en/about-us",
     },
-  ];
+  ]);
 
-  const company = [
+  const [company,setCompany] = useState([
     {
       name: "CISCO",
       profile: "Genc & Genc next",
@@ -241,7 +249,7 @@ export default function Company() {
       hiring: "20",
       ctc: "7 LPA",
     },
-  ];
+  ]);
 
   const massSearch = () => {
     const searchMassRecInput = document.querySelector("#searchMassRec");
@@ -283,7 +291,66 @@ export default function Company() {
     });
   };
 
+  const createNewMassCompany = () =>{
+    const Name = newCompanyName.current.value;
+    const Profile = newProfileName.current.value;
+    const Hiring = newHiringNumber.current.value;
+    const CTC = newCTC.current.value;
+    const Link = newLink.current.value;
+
+    const newObj = {
+      name: Name,
+      profile: Profile,
+      hiring: Hiring,
+      ctc: CTC,
+      link: Link
+    };
+    console.log(newObj);
+    newCompanyName.current.value  = "";
+    newProfileName.current.value = "";
+    newHiringNumber.current.value = "";
+    newCTC.current.value = "";
+    newLink.current.value = "";
+    setMass([...mass,newObj]);
+  };
+  const createNewStarCompany = () =>{
+
+    const newObj = {
+      name: newCompanyName.current.value,
+      profile: newProfileName.current.value,
+      hiring: newHiringNumber.current.value,
+      ctc: newCTC.current.value,
+      link: newLink.current.value
+    };
+    newCompanyName.current.value  = "";
+    newProfileName.current.value = "";
+    newHiringNumber.current.value = "";
+    newCTC.current.value = "";
+    newLink.current.value = "";
+    setCompany([...company,newObj]);
+  };
+  useEffect(() => {
+    const storedList1 = localStorage.getItem("mass");
+    const storedList2 = localStorage.getItem("company");
+    if (storedList1) {
+      setMass(JSON.parse(storedList1));
+    }
+    if (storedList2) {
+      setCompany(JSON.parse(storedList2));
+    }
+  }, []);
+
+ useEffect(()=>{
+  localStorage.setItem("mass",JSON.stringify(mass));
+ },[mass]);
+
+//  useEffect(()=>{
+//   localStorage.setItem("company",JSON.stringify(company));
+//  },[company]);
+
   return (
+    
+
     <div className="companyrecruit">
       <h1>Campus Recruiters</h1>
       <h3 className="c1">Companies hire for following Job Profiles :- </h3>
@@ -325,6 +392,26 @@ export default function Company() {
           placeholder="Search..."
           onChange={massSearch}
         />
+        <br/>
+        {user.role === "CRPC Head" ? (
+        <div className="createUser">
+          <input type="text" placeholder="Company Name" ref={newCompanyName} />
+          <input type="text" placeholder="Profile Name" ref={newProfileName} />
+          <input
+            type="text"
+            placeholder="Number Of Hiring"
+            ref={newHiringNumber}
+          />
+          <input type="text" placeholder="CTC" ref={newCTC} />
+          <input
+            type="text"
+            placeholder="Company offical website link"
+            ref={newLink}
+          />
+          <button className="Add" onClick={createNewMassCompany}>Add </button>        </div>
+      ) : (
+        ""
+      )}
         <br />
         <br />
         <div className="compcard_details">
@@ -369,11 +456,34 @@ export default function Company() {
           placeholder="Search..."
           onChange={starSearch}
         />
+        <br/>
+        {user.role === "CRPC Head" ? (
+        <div className="createUser">
+          <input type="text" placeholder="Company Name" ref={newCompanyName} />
+          <input type="text" placeholder="Profile Name" ref={newProfileName} />
+          <input
+            type="text"
+            placeholder="Number Of Hiring"
+            ref={newHiringNumber}
+          />
+          <input type="text" placeholder="CTC" ref={newCTC} />
+          <input
+            type="text"
+            placeholder="Company offical website link"
+            ref={newLink}
+          />
+          <button className="Add" onClick={createNewStarCompany}>Add</button>        </div>
+      ) : (
+        ""
+      )}
         <br />
         <br />
+        {(user.role==="CRPC Head")?<div className="photo21">
+          <img src={photo2} alt="compimage" />
+        </div>:
         <div className="photo2">
           <img src={photo2} alt="compimage" />
-        </div>
+        </div>}
         <div className="compcard_details">
           {company.map(({ name, profile, hiring, ctc }) => (
             <div className="compcard starRecruiters">

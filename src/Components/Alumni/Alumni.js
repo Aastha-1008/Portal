@@ -84,14 +84,32 @@ export default function Alumni() {
       <h1>Alumni</h1>
       <br></br>
       <p>
-        👉 Connecting with alumni can be an invaluable resource for individuals
-        looking to solve any kind of problem or enhance their knowledge in a
-        particular area. Alumni, who have already gone through similar
+        👉 Alumni, who have already gone through similar
         experiences and have established careers, can provide insight and
         guidance on how to navigate various challenges. By building
         relationships with alumni, individuals can tap into their expertise and
         gain access to networks that can open doors to new opportunities.
       </p>
+      {user.role === "admin" ? (
+        <div className="createUser">
+          <input type="text" placeholder="Student Name" ref={newAlumniName} />
+          <input type="text" placeholder="Company Name" ref={newCompanyName} />
+          <input
+            type="text"
+            placeholder="Position In Company"
+            ref={newPosition}
+          />
+          <input type="text" placeholder="PassOut Year" ref={newPassout} />
+          <input
+            type="text"
+            placeholder="LinkedIn profile link"
+            ref={newLinkedIn}
+          />
+          <button onClick={createNewUser}>Create</button>
+        </div>
+      ) : (
+        ""
+      )}
       <div className="alumniCard" onMouseOver={chatMsg}>
         {alumni.map(
           ({ id, name, company, position, passoutYear, linkedIn }) => (
@@ -127,26 +145,6 @@ export default function Alumni() {
           )
         )}
       </div>
-      {user.role === "admin" ? (
-        <div className="createUser">
-          <input type="text" placeholder="Student Name" ref={newAlumniName} />
-          <input type="text" placeholder="Company Name" ref={newCompanyName} />
-          <input
-            type="text"
-            placeholder="Position In Company"
-            ref={newPosition}
-          />
-          <input type="text" placeholder="PassOut Year" ref={newPassout} />
-          <input
-            type="text"
-            placeholder="LinkedIn profile link"
-            ref={newLinkedIn}
-          />
-          <button onClick={createNewUser}>Create</button>
-        </div>
-      ) : (
-        ""
-      )}
     </div>
   );
 }

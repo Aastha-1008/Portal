@@ -91,11 +91,16 @@
 .photo2 {
   position: absolute;
   left: 66rem;
-  margin-top: -25rem;
+  margin-top: -22rem;
 }
-.photo2 img {
-  width: 25rem;
-  height: 25rem;
+.photo21 {
+  position: absolute;
+  left: 66rem;
+  margin-top: -30rem;
+}
+.photo2 img,.photo21 img {
+  width: 20rem;
+  height: 20rem;
 }
 .lastcomp {
   position: relative;
@@ -137,4 +142,11 @@
     width: 15rem;
     height: 2rem;
     border: 2px solid #042331;
+}
+.Add{
+  background-color: rgb(255, 183, 0);
+  border-color: rgb(255, 183, 0);
+  border-radius: 10px;
+  font-weight: 600;
+  margin-left: 2rem;
 }
