@@ -11,8 +11,9 @@ export default function Home() {
     <>
     {isAuthenticated?
 
-    <Maincontent/>:
-    (<div className="userLogOut">Please LogIn first</div>)
+    <div><Maincontent/></div>:
+    (<div className="userLogOut">Please LogIn first <br/> 
+</div>)
   };
   </>
   );

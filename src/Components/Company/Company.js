@@ -340,9 +340,7 @@ export default function Company() {
     }
   }, []);
 
- useEffect(()=>{
-  localStorage.setItem("mass",JSON.stringify(mass));
- },[mass]);
+
 
 //  useEffect(()=>{
 //   localStorage.setItem("company",JSON.stringify(company));
